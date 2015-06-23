@@ -1,0 +1,12 @@
+.ui-state-highlight
+{
+	background-color: #FCFAF2;
+	border: 1px solid #FCEFA1;
+}
+
+.ui-sortable tr:not(.ui-state-highlight) td:first-child {
+    background-image: url("/wp-content/plugins/gravity-forms-list-field-sortable/img/sortable.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
