@@ -14,11 +14,11 @@ Allows 'list' type field rows to be re-ordered by drop and dragging.
 
 Adds the ability to make the [Gravity Forms](http://www.gravityforms.com/ "Gravity Forms website") list field rows sortable by drop and dragging their order.
 
-Disclaimer:
+**Disclaimer**
 
-Gravity Forms is a trademark of Rocketgenius, Inc.
+*Gravity Forms is a trademark of Rocketgenius, Inc.*
 
-This plugins is provided “as is” without warranty of any kind, expressed or implied. The author shall not be liable for any damages, including but not limited to, direct, indirect, special, incidental or consequential damages or losses that occur out of the use or inability to use the plugin.
+*This plugins is provided “as is” without warranty of any kind, expressed or implied. The author shall not be liable for any damages, including but not limited to, direct, indirect, special, incidental or consequential damages or losses that occur out of the use or inability to use the plugin.*
 
 == Installation ==
 
