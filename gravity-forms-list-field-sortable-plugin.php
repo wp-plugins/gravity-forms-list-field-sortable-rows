@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Gravity Forms - List Field Sortable Rows
+Plugin Name: Sortable List Fields Rows for Gravity Forms
 Description: Allows list field rows to be sorted by drop and dragging their position.
-Version: 1.0
+Version: 1.1
 Author: Adrian Gordon
 Author URI: http://www.itsupportguides.com 
 License: GPL2

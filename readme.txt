@@ -1,10 +1,10 @@
-=== Gravity Forms - List Field Sortable Rows ===
+=== Sortable List Fields Rows for Gravity Forms ===
 Contributors: ovann86
 Donate link: http://www.itsupportguides.com/
 Tags: Gravity Forms
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,12 @@ Allows 'list' type field rows to be re-ordered by drop and dragging.
 == Description ==
 
 Adds the ability to make the [Gravity Forms](http://www.gravityforms.com/ "Gravity Forms website") list field rows sortable by drop and dragging their order.
+
+Disclaimer:
+
+Gravity Forms is a trademark of Rocketgenius, Inc.
+
+This plugins is provided “as is” without warranty of any kind, expressed or implied. The author shall not be liable for any damages, including but not limited to, direct, indirect, special, incidental or consequential damages or losses that occur out of the use or inability to use the plugin.
 
 == Installation ==
 
@@ -30,6 +36,11 @@ Adds the ability to make the [Gravity Forms](http://www.gravityforms.com/ "Gravi
 2. Shows the 'Sortable' options in the form editor.
 
 == Changelog ==
+
+= 1.1 =
+* Fix: Resolve CSS issue with icon not loading.
+* Improvement: Add CSS to display 'move' mouse cursor over sortable rows.
+* Maintenance: change plugin name from 'Gravity Forms - List Field Sortable Rows' to 'Sortable List Fields Rows for Gravity Forms'.
 
 = 1.0 =
 * First public release.
