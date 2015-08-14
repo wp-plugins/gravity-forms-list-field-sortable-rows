@@ -2,7 +2,7 @@
 /*
 Plugin Name: Sortable List Fields Rows for Gravity Forms
 Description: Allows list field rows to be sorted by drop and dragging their position.
-Version: 1.1
+Version: 1.2
 Author: Adrian Gordon
 Author URI: http://www.itsupportguides.com 
 License: GPL2
@@ -20,9 +20,18 @@ if (!class_exists('ITSG_GF_List_Field_Stortable')) {
          */
 		 public function __construct()
         {
-            // register actions
+			// register plugin functions through 'plugins_loaded' - 
+			// this delays the registration until all plugins have been loaded, ensuring it does not run before Gravity Forms is available.
+            add_action( 'plugins_loaded', array(&$this,'register_actions') );   
+			
+		}
+		
+		/*
+         * Register plugin functions
+         */
+		function register_actions() {
             if ((self::is_gravityforms_installed())) {
-				// start the plugin
+				//start plug in
 				add_action('gform_enqueue_scripts', array(&$this,'enqueue_scripts'), 90, 2);
 				add_action('gform_field_appearance_settings', array(&$this,'field_sortable_settings') , 10, 2 );
 				add_action('gform_editor_js', array(&$this,'field_sortable_editor_js'));
@@ -35,13 +44,15 @@ if (!class_exists('ITSG_GF_List_Field_Stortable')) {
 		 * Enqueue scripts required to run sortable feature on front end form - only runs if list field has 'sortable' option enabled
 		 */
 		function enqueue_scripts($form, $is_ajax) {
-			foreach ( $form['fields'] as $field ) {
-				if ( 'list' == $field['type'] && true == $field['itsg_field_sortable'] ) {
-					wp_enqueue_script('jquery');
-					wp_enqueue_script('jquery-ui-sortable');
-					wp_enqueue_style('list_field_sortable_style',  plugins_url( '/css/list-field-sortable-style.css', __FILE__ ));
-					add_action('wp_footer',array(&$this,'sortable_javascript'));
-					break;
+			if (is_array($form['fields']) || is_object($form['fields'])) {
+				foreach ( $form['fields'] as $field ) {
+					if ( 'list' == $field['type'] && true == $field['itsg_field_sortable'] ) {
+						wp_enqueue_script('jquery');
+						wp_enqueue_script('jquery-ui-sortable');
+						wp_enqueue_style('list_field_sortable_style',  plugins_url( '/css/list-field-sortable-style.css', __FILE__ ));
+						add_action('wp_footer',array(&$this,'sortable_javascript'));
+						break;
+					}
 				}
 			}
 		}

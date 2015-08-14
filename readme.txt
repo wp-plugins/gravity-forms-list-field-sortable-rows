@@ -1,10 +1,10 @@
 === Sortable List Fields Rows for Gravity Forms ===
 Contributors: ovann86
 Donate link: http://www.itsupportguides.com/
-Tags: Gravity Forms
+Tags: Gravity Forms, sortable, list field, forms
 Requires at least: 4.0
-Tested up to: 4.2.2
-Stable tag: 1.1
+Tested up to: 4.2.5
+Stable tag: 1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ Adds the ability to make the [Gravity Forms](http://www.gravityforms.com/ "Gravi
 2. Shows the 'Sortable' options in the form editor.
 
 == Changelog ==
+
+= 1.2 =
+* Maintenance: change constructor so plugin load is delayed using the 'plugins_loaded' action - this ensures the plugin loads after Gravity Forms has loaded and functions correctly.
+* Maintenance: resolve various PHP errors that were appearing in debug mode, but did not affect functionality.
 
 = 1.1 =
 * Fix: Resolve CSS issue with icon not loading.
